@@ -103,7 +103,7 @@ If you encounter any issues, please feel free to open an issue on [GitHub](https
 
 ## License
 
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/sandunMadhushan/my-electron-app/blob/main/LICENSE) file for details.
 
 ---
 
