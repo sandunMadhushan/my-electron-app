@@ -1,16 +1,34 @@
 {
   "name": "my-electron-app",
   "version": "1.0.0",
+  "description": "An example Electron app",
   "main": "main.js",
-  "description": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-builder"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^33.2.1"
+    "electron": "^33.2.1",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.sandunMadhushan.my-electron-app",
+    "productName": "My Electron App",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*",
+      "!node_modules",
+      "!dist",
+      "!release-builds"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "icon.ico"
+    }
   }
 }

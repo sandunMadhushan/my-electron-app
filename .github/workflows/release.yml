@@ -9,10 +9,27 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
+      # Step 1: Checkout Code
       - name: Checkout code
         uses: actions/checkout@v3
 
+      # Step 2: Set Up Node.js Environment
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      # Step 3: Install Dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Step 4: Build the Electron App
+      - name: Build the Electron App
+        run: npm run build
+
+      # Step 5: Create a Release
       - name: Create Release
+        id: create_release
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -23,3 +40,12 @@ jobs:
             Automatically created release for ${{ github.ref_name }}.
           draft: false
           prerelease: false
+
+      # Step 6: Upload the Setup File to the Release
+      - name: Upload Release Asset
+        uses: actions/upload-release-asset@v1
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./dist/MyElectronApp Setup.exe
+          asset_name: MyElectronApp-Setup-v${{ github.ref_name }}.exe
+          asset_content_type: application/octet-stream
