@@ -1,4 +1,4 @@
-# My Electron App
+# My Electron App v2.0
 
 Welcome to **My Electron App**! 🚀 This project is an Electron-based desktop application designed to showcase how web technologies (HTML, CSS, and JavaScript) can be used to build cross-platform desktop apps. Whether you're new to Electron or a seasoned developer, this app provides a great starting point to explore and learn.
 
