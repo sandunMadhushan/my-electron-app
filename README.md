@@ -1,5 +1,7 @@
 # My Electron App v2.0
 
+[![](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/sandunMadhushan)
+
 Welcome to **My Electron App**! 🚀 This project is an Electron-based desktop application designed to showcase how web technologies (HTML, CSS, and JavaScript) can be used to build cross-platform desktop apps. Whether you're new to Electron or a seasoned developer, this app provides a great starting point to explore and learn.
 
 ---
